@@ -70,3 +70,4 @@ class Solution(object):
         # 4. 如果循环跑完了，所有旋转方式都试过了，还是没找到匹配的
         #    那就说明 s2 不是 s1 的旋转。
         return False
+

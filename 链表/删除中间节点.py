@@ -4,6 +4,7 @@
 核心：非头尾节点
 """
 class Solution(object):
+    """解题思路：只能从当前节点向后溯源"""
     def deleteNode(self,Node):
         Node.val = Node.next.val
         Node.next = Node.next.next

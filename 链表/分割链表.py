@@ -1,6 +1,3 @@
-# D:/程序设计/python项目/PythonProject/链表/分割链表.py
-
-# 方案一：使用 from ... import ... 直接导入需要的函数和类
 from 创建和打印链表 import ListNode, create_linked_list, print_linked_list
 
 

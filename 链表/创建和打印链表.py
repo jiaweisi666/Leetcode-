@@ -1,10 +1,11 @@
 class ListNode(object):
+    """链表节点"""
     def __init__(self,val=0,next=None):
         self.val = val
         self.next = next
 
 def create_linked_list(items: list) -> ListNode:
-    """辅助函数：根据列表来创建链表"""
+    """根据列表来创建链表"""
     if not items:
         return None
     head = ListNode(items[0])
@@ -15,7 +16,7 @@ def create_linked_list(items: list) -> ListNode:
     return head
 
 def print_linked_list(head: ListNode):
-    """辅助函数：打印链表"""
+    """打印链表"""
     current = head
     items = []
     while current:

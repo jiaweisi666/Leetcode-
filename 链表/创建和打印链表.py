@@ -20,7 +20,7 @@ class ListNode(object):
         items = []
         while current:
             items.append(str(current.val))
-            current = current.nex
+            current = current.next
         print("->".join(items))
 
 

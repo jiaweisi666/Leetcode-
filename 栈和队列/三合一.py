@@ -1,7 +1,7 @@
 class TripleInOne(object):
-"""
-三合一。描述如何只用一个数组来实现三个栈。
-"""
+    """
+    三合一。描述如何只用一个数组来实现三个栈。
+    """
     def __init__(self, stackSize: int):
         """
         构造函数：初始化数据结构

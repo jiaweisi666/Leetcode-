@@ -12,6 +12,9 @@ class StackOfPlates:
         self.cap = cap #每个盘子堆的高度限制
 
     def push(self, val: int) -> None:
+        """
+        将元素压入栈顶
+        """
         if self.cap <= 0:  #边界测试会卡这里
             return
         if not self.stack or len(self.stack[-1]) == self.cap:
@@ -20,6 +23,9 @@ class StackOfPlates:
             self.stack[-1].append(val)
 
     def pop(self) -> int:
+        """
+        弹出栈顶元素
+        """
         if not self.stack:
             return -1
         value = self.stack[-1].pop()
@@ -28,6 +34,9 @@ class StackOfPlates:
         return value
 
     def popAt(self, index: int) -> int:
+        """
+        根据指定的子栈，执行pop操作。
+        """
         if not self.stack or index < 0 or index >= len(self.stack):
             return -1
         value = self.stack[index].pop()

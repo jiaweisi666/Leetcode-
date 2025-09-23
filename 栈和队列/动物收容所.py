@@ -1,3 +1,7 @@
+from collections import deque
+from typing import List
+
+
 class AnimalShelfN1:
     """
     动物收容所。有家动物收容所只收容狗与猫，且严格遵守“先进先出”的原则。
@@ -47,10 +51,6 @@ class AnimalShelfN1:
 首先：真实的动物标签并不一定是顺序排列，其次：就算是顺序排列，动物的标签也不能用来表示列表元素的位置。
 所以直接用remove方法更好
 '''
-
-from collections import deque
-from typing import List
-
 
 class AnimalShelfN2:
     """

@@ -49,17 +49,16 @@ class Solution:
             return root
 
         # 2. 递归“甩锅”给左右孩子
-        left_lca = self.lowestCommonAncestor(root.left, p, q)
-        right_lca = self.lowestCommonAncestor(root.right, p, q)
+        left_lca = self.lowestCommonAncestorN2(root.left, p, q)
+        right_lca = self.lowestCommonAncestorN2(root.right, p, q)
 
         # 3. 根据左右子树的返回结果，在当前节点做决策
         # 情况一：p 和 q 分别在左右子树，那么当前 root 就是 LCA
         if left_lca and right_lca:
             return root
 
-        # 情况二：p 和 q 都在左子树或右子树中，或者其中一个还没找到
-        # 此时，只需返回那个非 None 的结果即可。
-        # 如果两边都返回 None，这里也会正确地返回 None。
+        # 情况二：左边（右边）全不是，中间也不是，那肯定就是在右边了（左边）
+        # 或者如果两边都返回 None，这里也会正确地返回 None。
         return left_lca if left_lca is not None else right_lca
 
 
